@@ -39,5 +39,19 @@ fn main() {
     let one = x.2;
     println!("first = {}, second = {}, third = {}", five_hundred, six_point_four, one);
     */
-    
+
+    /*
+    let mut x: (i32, i32) = (1, 2);
+    x.0 = 0;
+    x.1 += 5;
+    println!("x.0 = {}", x.0);
+    println!("x.1 = {}", x.1);
+    */
+
+    let a: [i32; 5] = [1, 3, 5, 7, 90];
+    let b = [457; 11];
+    let c = [9, 8, 7];
+    println!("a[2] = {}", a[2]);
+    println!("b[7] = {}", b[7]);
+    println!("c[1] = {}", c[1]);  
 }
