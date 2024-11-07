@@ -11,6 +11,9 @@ fn main() {
 
     let x = five();
     println!("The value of x is {x}");
+
+    let bb = plus_one(67);
+    println!("The value of BB is {bb}");
 }
 
 fn another_function(x: i32) {
@@ -23,4 +26,8 @@ fn print_labeled_measurements(value: i32, unit_label: char) {
 
 fn five() -> i32 {
     5
+}
+
+fn plus_one(x: i32) -> i32 {
+    x + 1
 }
