@@ -6,11 +6,18 @@ fn read(y: bool) {
     }
 }
 
-
-fn main() {
-    read(x);
-    let x = false;
-    
+fn add_suffix(mut name: String) -> String {
+    name.push_str(" Wheel");
+    name
 }
 
 
+fn main() {
+    let x = false;
+    read(x);
+
+    let first = String::from("Ferris");
+    let first_clone = first.clone();
+    let full = add_suffix(first_clone);
+    println!("{full}, originally {first}");
+}
