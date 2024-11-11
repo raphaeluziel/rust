@@ -1,3 +1,5 @@
+use std::vec;
+
 fn main() {
     let m1 = String::from("Hello");
     let m2 = String::from("world");
@@ -37,6 +39,13 @@ fn main() {
     let s = String::from("Hello");
     let s_len1 = str::len(&s);
     let s_len2 = s.len();
+    assert_eq!(s_len1, s_len2);
+
+    let mut v: Vec<i32> = vec![1, 2, 3];
+    let num: &i32 = &v[2];
+    println!("Third element is {}", *num);
+    v.push(4);
+
 }
 
 fn greet(g1: &String, g2: &String) {
