@@ -1,5 +1,6 @@
 
 fn main() {
+    /*
     struct Person { name: String, birth: i32, }
 
     let mut composers = Vec::new();
@@ -11,20 +12,26 @@ fn main() {
     for composer in &composers {
         println!("{}, born {}", composer.name, composer.birth);
     }
-
-    /*
     for i in 0..3 {
         println!("{} born in {}", composers[i].name, composers[i].birth);
     }
-    */
-
     println!("{}", composers[0].name);
-
+    */
 
     // Page 106
     let x = 14;
-    let r = &x;
+    let rx = &x;
+    let rrx = &rx;
+    let rrrx = &rrx;
 
-    println!("{:p}", r);
+    let b = ***rrrx;
+
+    println!("rx   =  {:p}", rx);
+    println!("rrx  =  {:p}", rrx);
+    println!("rrrx =  {:p}", rrrx);
+
+    println!("check = {:p}", *&&x);
+
+    println!("b    =  {}", b);
 
 }
