@@ -1,3 +1,4 @@
+
 fn main() {
     struct Person { name: String, birth: i32, }
 
@@ -7,11 +8,9 @@ fn main() {
     composers.push(Person { name: "Dowland".to_string(), birth: 1563 });
     composers.push(Person { name: "Lully".to_string(), birth: 1632 });
 
-    /*
     for composer in &composers {
         println!("{}, born {}", composer.name, composer.birth);
     }
-    */
 
     /*
     for i in 0..3 {
@@ -19,5 +18,13 @@ fn main() {
     }
     */
 
-    println!("{}", composers[0].name);   
+    println!("{}", composers[0].name);
+
+
+    // Page 106
+    let x = 14;
+    let r = &x;
+
+    println!("{:p}", r);
+
 }
