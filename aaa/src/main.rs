@@ -16,7 +16,7 @@ fn main() {
         println!("{} born in {}", composers[i].name, composers[i].birth);
     }
     println!("{}", composers[0].name);
-    */
+    
 
     // Page 106
     let x = 14;
@@ -33,4 +33,20 @@ fn main() {
     println!("tx = {:p}", tx);
 
     println!("y = {}", y);
+    */
+
+    // page 116 removing the * in *r < *s
+    fn smallest(v: &[i32]) -> &i32 {
+        let mut s = &v[0];
+        for r in &v[1..] {
+            if r < s { s = r; }
+        }
+        s
+    }
+    let s;
+    {
+        let parabola = [16, 9, 4, 2, 4, 9, 16];
+        s = smallest(&parabola);
+        println!("{}", *s);
+    }
 }
