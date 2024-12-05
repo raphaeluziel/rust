@@ -20,18 +20,17 @@ fn main() {
 
     // Page 106
     let x = 14;
+    let mut y = 78;
+
     let rx = &x;
-    let rrx = &rx;
-    let rrrx = &rrx;
+    let sx = &x;
+    let tx = &mut y;
 
-    let b = ***rrrx;
+    *tx = 9999;
 
-    println!("rx   =  {:p}", rx);
-    println!("rrx  =  {:p}", rrx);
-    println!("rrrx =  {:p}", rrrx);
+    println!("rx = {:p}", rx);
+    println!("sx = {:p}", sx);
+    println!("tx = {:p}", tx);
 
-    println!("check = {:p}", *&&x);
-
-    println!("b    =  {}", b);
-
+    println!("y = {}", y);
 }
