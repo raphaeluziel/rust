@@ -1,5 +1,3 @@
-use image::ImageBuffer;
-use num_complex::Complex;
 
 fn main() {
     //! An example of generating julia fractals.
